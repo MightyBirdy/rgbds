@@ -54,7 +54,10 @@ sym_GetValue(char *tzName)
 			}
 		}
 
-		errx(1, "Unknown symbol '%s'", tzName);
+		// errx(1, "Unknown symbol '%s'", tzName);
+		fprintf(stderr, "Unknown symbol '%s'\n", tzName);
+		raised_error = 1;
+		return 0x0000;
 	}
 }
 
@@ -72,7 +75,10 @@ sym_GetBank(char *tzName)
 		}
 	}
 
-	errx(1, "Unknown symbol '%s'", tzName);
+	// errx(1, "Unknown symbol '%s'", tzName);
+	fprintf(stderr, "Unknown symbol '%s'\n", tzName);
+	raised_error = 1;
+	return 0x00;
 }
 
 void 

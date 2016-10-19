@@ -5,5 +5,6 @@
 
 extern SLONG fillchar;
 extern char *smartlinkstartsymbol;
+extern char raised_error;
 
 #endif
